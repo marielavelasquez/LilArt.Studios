@@ -5,145 +5,234 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LilArt.Studios</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="styleLilArt.css">
 </head>
 
 <body>
     <header>
-        <div class="log-nav">
-            
-            <img src="images.img/logo/logo-lil.png" alt="Logo de la empresa" class="logo" />
-            <nav>
-                <ul id="nav-menu">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#gallery">Galeria</a></li>
-                    <li><a href="#form-reserve">Reservar</a></li>
-                    <li class="has-submenu">
-                        <a href="#contacto">Contacto</a>
-                        <ul class="submenu">
-                            <li><a href="https://getbootstrap.com/docs/5.3/components/buttons/">Instagram</a></li>
-                            <li>Facefook</li>
-                            <li>Whatsapp</li>
-                            <li>TikTok</li>
-                        </ul>
-                        
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <section id="hero">
-        <div class="hero-content container">
-            <div class="hero-text">
-                <h2>Uñas que hablan por ti</h2>
-                <p>Con mas de 7 años de experiencia, en LilArt.Studios cuidamos cada detalle para que tus manos reflejen
-                    tu estilo, tu elegancia y tu actitud</p>
-                <button id="btn-go-reservar" class="btn">Reservar una cita</button>
-            </div>
-            <div class="hero-image">
-                <img src="images.img/FotoHero/mujer.jpg" alt="mujer uñas elegantes" />
-            </div>
-        </div>
-    </section>
+        <nav class="navbar navbar-expand-lg container" id="inicio">
+            <div class="container-fluid">
 
+                <a class="navbar-brand" href="#inicio">
+                    <img src="images.img/logo/logo-lil.png" alt="Logo LilArt" class="img-fluid"
+                        style="max-height:50px;">
+                </a>
 
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-    <!--SECTION DE Video-Naila-Text-->
-
-    <section id="video-nails">
-        <div class="video-wrapper container">
-            <div class="video-area">
-                <video autoplay muted loop playsinline>
-                    <source src="images.img/video-area/esmaltes.mp4" type="video/mp4">
-                    Tu navegador no soporta el video.
-                </video>
-            </div>
-
-            <div class="reservar-invite">
-                <p class="pretty-text">Una manicurista es una persona que tiene por oficio cuidar y embellecer las manos
-                    y, especialmente,
-                    las uñas
-                    de las manos y los pies. En LilArt.Studios, ofrecemos una amplia gama de servicios para que tus
-                    manos
-                    luzcan perfectas.</p>
-                <button id="btn-go-reservar2" class="btn">Reservar una cita</button>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- SECCIÓN DE RESERVA FORMULARIO -->
-
-    <section id="form-reserve">
-        <div class="wrap-gallery-form container">
-            <div class="half-width">
-                <h2>Reservar una cita con Lilibeth</h2>
-
-                <form id="whatsapp-form" class="form-reserva">
-                    <label for="name">Nombre completo:</label>
-                    <input type="text" id="name" name="name" required placeholder="e.g Lilibeth Velasquez" />
-
-                    <label for="email">Correo electrónico:</label>
-                    <input type="email" id="email" name="email" required placeholder="e.g correo@gmail/hotmail.com" />
-
-                    <label for="phone">Numero de telefono</label>
-                    <input type="tel" id="phone" name="phone" required placeholder="e.g. +34 612 345 678"/>
-
-                    <label for="comment">¿Tienes algun  comentario?</label>
-                    <textarea name="comment" id="comment" rows="4" placeholder="e.g Me gustaría un diseño personalizado" cols="4"></textarea>
-
-                    <label for="day">Selecciona una fecha disponible:</label>
-                    <select name="day" id="day" required>
-                        <option value="">Selecciona una fecha disponible:</option>
-                    </select>
-
-                    <label for="hour">Selecciona una hora disponible:</label>
-                    <select name="hour" id="hour" required>
-                        <option value="">-- Primero elige una fecha --</option>
-                    </select>
-
-                    <label for="reference">¿Cómo llegaste hasta aquí?</label>
-                    <select name="reference" id="reference" required>
-                        <option value="">-- Selecciona una opción --</option>
-                        <option value="recomendation">Por recomendación</option>
-                        <option value="instagram">Instagram</option>
-                        <option value="google">Buscando en Google</option>
-                        <option value="otra">Otra</option>
-                    </select>
-
-                    <label for="design">¿Que sistema desea realizarse?</label>
-                    <select name="system" id="system">
-                        <option value="">Elige un Sistema</option>
-                        <option value="limpieza manicura">Limpieza Manicura: 20€</option>
-                        <option value="limpieza + esmalte">Limpieza Manicura + Esmalte: 30€</option>
-                        <option value="acrilico">Acrilico: 60€</option>
-                        <option value="kapping">Kapping: 40€</option>
-                        <option value="rubber">Ruber: 45€</option>
-                    </select>
-
-                    <button type="submit">Reservar</button>
-                </form>
-            </div>
-
-            <div id="gallery" class="half-width">
-                <h2>Parte de nuestro trabajo</h2>
-                <div class="gallery-carousel">
-                    <div class="carousel-track">
-                        <img src="images.img/Gallery mami/uñasmami.jpg" alt="francesas blancas">
-                        <img src="images.img/Gallery mami/azulDegradado.jpg" alt="azul degradado">
-                        <img src="images.img/Gallery mami/corazoncitos.jpg" alt="con corazoncitos">
-                        <img src="images.img/Gallery mami/cuadradaslargas.jpg" alt="cuadradas largas">
-                        <img src="images.img/Gallery mami/cuadradaspuntitosmarrones.jpg" alt="cuadradas cuquis">
-                        <img src="images.img/Gallery mami/francesas.jpg" alt="francesas">
-                        <img src="images.img/Gallery mami/largasPlateadas.jpg" alt="largas plateadas">
-                        <img src="images.img/Gallery mami/rojaCorazon.jpg" alt="roja con corazon">
-                    </div>
-                    <button class="prev">←</button>
-                    <button class="next">→</button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#gallery">Galería</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#form-reserve">Reservar</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Contacto
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Instagram</a></li>
+                                <li><a class="dropdown-item" href="#">Facebook</a></li>
+                                <li><a class="dropdown-item" href="#">WhatsApp</a></li>
+                                <li><a class="dropdown-item" href="#">TikTok</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <section id="hero" class="py-5 my-hero-bg">
+        <div class="container my-hero-container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6 text-center text-md-start">
+                    <h2 class="display-6 my-hero-title">Uñas que hablan por ti</h2>
+                    <p class="lead my-hero-subtitle">Con más de 7 años de experiencia, en LilArt.Studios cuidamos cada
+                        detalle para que tus manos reflejen tu estilo, tu elegancia y tu actitud.</p>
+                    <button id="btn-go-reservar" class="btn btn-primary my-hero-btn">Reservar una cita</button>
+                </div>
+                <div class="col-12 col-md-6 text-center">
+                    <img src="images.img/FotoHero/mujer.jpg" alt="Uñas elegantes" class="img-fluid rounded my-hero-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--SECTION DE Video-Nail-Text-->
+
+    <section id="video-nails" class="py-5" >
+        <div class="container ">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-6 d-flex justify-content-center">
+                    <div class="rounded overflow-hidden mx-auto" style="max-width: 500px;">
+                        <video autoplay muted loop playsinline class="w-100 h-100 object-fit-contain">
+                            <source src="images.img/video-area/esmaltes.mp4" type="video/mp4">
+                            Tu navegador no soporta video.
+                        </video>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <p class="fs-5 text-justify">
+                        Una manicurista es una persona que tiene por oficio cuidar y embellecer las manos
+                        y, especialmente,
+                        las uñas
+                        de las manos y los pies. En LilArt.Studios, ofrecemos una amplia gama de servicios para que tus
+                        manos
+                        luzcan perfectas.
+                    </p>
+                    <button id="btn-go-reservar2" class="btn btn-primary">Reservar una cita</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Carousel--><!--Carousel--><!--Carousel--><!--Carousel--><!--Carousel-->
+
+    <section id="carousel-crossfade" class="py-5">
+
+        <h2>Parte de nuestro trabajo</h2>
+
+        <div class="container">
+            <!-- Carousel Bootstrap con fade -->
+            <div id="carouselExampleFade" class="carousel slide carousel-fade mx-auto" data-bs-ride="carousel"
+                data-bs-interval="4000" data-bs-pause="hover" style="max-width:800px; height:450px;">
+
+                <!-- indicadores (dots) -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active"
+                        aria-current="true"></button>
+                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="4"></button>
+                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="5"></button>
+                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="6"></button>
+                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="7"></button>
+                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to=""></button>
+                </div>
+
+                <!-- diapositivas -->
+                <div class="carousel-inner h-100 rounded">
+                    <div class="carousel-item active h-100">
+                        <img src="images.img/Gallery mami/azulDegradado.jpg"
+                            class="d-block w-100 h-100 object-fit-cover" alt="diseño 1">
+                    </div>
+                    <div class="carousel-item h-100">
+                        <img src="images.img/Gallery mami/corazoncitos.jpg" class="d-block w-100 h-100 object-fit-cover"
+                            alt="diseño 2">
+                    </div>
+                    <div class="carousel-item h-100">
+                        <img src="images.img/Gallery mami/cuadradaslargas.jpg"
+                            class="d-block w-100 h-100 object-fit-cover" alt="diseño 3">
+                    </div>
+                    <div class="carousel-item h-100">
+                        <img src="images.img/Gallery mami/cuadradaspuntitosmarrones.jpg"
+                            class="d-block w-100 h-100 object-fit-cover" alt="diseño 3">
+                    </div>
+                    <div class="carousel-item h-100">
+                        <img src="images.img/Gallery mami/francesas.jpg" class="d-block w-100 h-100 object-fit-cover"
+                            alt="diseño 3">
+                    </div>
+                    <div class="carousel-item h-100">
+                        <img src="images.img/Gallery mami/largasPlateadas.jpg"
+                            class="d-block w-100 h-100 object-fit-cover" alt="diseño 3">
+                    </div>
+                    <div class="carousel-item h-100">
+                        <img src="images.img/Gallery mami/rojaCorazon.jpg" class="d-block w-100 h-100 object-fit-cover"
+                            alt="diseño 3">
+                    </div>
+                    <div class="carousel-item h-100">
+                        <img src="images.img/Gallery mami/uñasmami.jpg" class="d-block w-100 h-100 object-fit-cover"
+                            alt="diseño 3">
+                    </div>
+                </div>
+
+                <!-- flechas prev/next -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+
+            <!-- botón CTA centrado -->
+            <div class="text-center mt-4">
+                <button class="btn btn-outline-primary px-4 py-2">
+                    Pide tu cita
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="form-reserve" class="py-5">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-12 col-lg-6">
+                    <h2>Reservar una cita con Lilibeth</h2>
+                    <form id="whatsapp-form" class="row g-3">
+                        <div class="col-12">
+                            <label for="name" class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="email" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="phone" class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="system" class="form-label">Sistema deseado</label>
+                            <select id="system" class="form-select">
+                                <option selected>Elige un servicio</option>
+                                <option value="Manicura">Manicura – 20 €</option>
+                                …
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label for="day" class="form-label">Fecha</label>
+                            <select id="day" class="form-select" required></select>
+                        </div>
+                        <div class="col-6">
+                            <label for="hour" class="form-label">Hora</label>
+                            <select id="hour" class="form-select" required></select>
+                        </div>
+                        <div class="col-12">
+                            <label for="reference" class="form-label">¿Cómo llegaste?</label>
+                            <select id="reference" class="form-select" required>
+                                <option selected>Elige una opción</option>
+                                <option value="Instagram">Instagram</option>
+                                …
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label for="comment" class="form-label">Comentario</label>
+                            <textarea id="comment" class="form-control" rows="3"></textarea>
+                        </div>
+                        <div class="col-12 text-end">
+                            <button type="submit" class="btn btn-success">Reservar</button>
+                        </div>
+                    </form>
+                </div>
+
             </div>
         </div>
     </section>
@@ -157,9 +246,15 @@
     <script src="./javascript/carousel.js"></script>
     <script src="./javascript/reservarCitasWhatsapp.js"></script>
     <script src="./javascript/navBar.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
