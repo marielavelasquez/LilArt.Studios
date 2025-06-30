@@ -11,14 +11,17 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg container" id="inicio">
-            <div class="container-fluid">
+    <header class="sticky-top bg-white shadow-sm bg-opacity-50">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
 
-                <a class="navbar-brand" href="#inicio">
-                    <img src="images.img/logo/logo-lil.png" alt="Logo LilArt" class="img-fluid"
-                        style="max-height:50px;">
-                </a>
+                <div class="row">
+                    <div class="col-4">
+                        <a href="#hero">
+                            <img src="images.img/logo/logo-lil.png" alt="Logo LilArt" class="img-fluid">
+                        </a>
+                    </div>
+                </div>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,22 +29,60 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
+
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#gallery">Galería</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#form-reserve">Reservar</a></li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#hero">Inicio</a>
+                        </li>
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
+                                aria-expanded="false" id="contactoDropdown1">
+                                Servicios
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="contactoDropdown1">
+                                <li><a class="dropdown-item" href="#">Manicura</a></li>
+                                <li><a class="dropdown-item" href="#">Semipermanente</a></li>
+                                <li><a class="dropdown-item" href="#">Manicura Acrílica</a></li>
+                                <li><a class="dropdown-item" href="#">Manicura de Gel</a></li>
+                                <li><a class="dropdown-item" href="#">Manicura de Porcelana</a></li>
+                                <li><a class="dropdown-item" href="#">Manicura Rusal</a></li>
+                                <li><a class="dropdown-item" href="#">Manicura con Polygel</a></li>
+                                <li><a class="dropdown-item" href="#">Manicura Japonesa</a></li>
+                                <li><a class="dropdown-item" href="#">Nail Ar</a></li>
+                                <li><a class="dropdown-item" href="#">Stiletto</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#gallery">Galería</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#form-reserve">Reservar</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" id="contactoDropdown2">
                                 Contacto
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Instagram</a></li>
-                                <li><a class="dropdown-item" href="#">Facebook</a></li>
-                                <li><a class="dropdown-item" href="#">WhatsApp</a></li>
-                                <li><a class="dropdown-item" href="#">TikTok</a></li>
+                            <ul class="dropdown-menu"  aria-labelledby="contactoDropdown2">
+                                <li>
+                                    <a class="dropdown-item" href="https://www.instagram.com/lilart.studios/" target="_blank"rel="noopener noreferrer">Instagram</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="https://www.facebook.com/profile.php?id=61571389152915" target="_blank" rel="noopener noreferrer">Facebook</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="https://wa.me/34641216186" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="https://www.tiktok.com/@lilartstudiospain?lang=es-419" target="_blank" rel="noopener noreferrer">TikTok</a>
+                                </li>
                             </ul>
+
                         </li>
                     </ul>
                 </div>
@@ -71,7 +112,7 @@
 
     <!--SECTION DE Video-Nail-Text-->
 
-    <section id="video-nails" class="py-5" >
+    <section id="video-nails" class="py-5">
         <div class="container ">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-6 d-flex justify-content-center">
@@ -248,12 +289,6 @@
     <script src="./javascript/navBar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
-        integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
         crossorigin="anonymous"></script>
 </body>
 
