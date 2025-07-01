@@ -24,6 +24,9 @@ header {
 ul li{
   font-size: 20px;
 }
+.video-nails{
+  height: 100vw;
+}
 
 /*CAROUSEL*/
 .object-fit-cover {
