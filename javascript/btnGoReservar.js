@@ -16,3 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const section = document.getElementById("form-reserve");
     section.scrollIntoView({ behavior: "smooth"})
   });
+
+  const thirdButton = document.getElementById("btn-go-reservar3");
+
+  thirdButton.addEventListener("click", function (){
+    const section = document.getElementById("form-reserve");
+    section.scrollIntoView({bahavior: "smooth"})
+  });

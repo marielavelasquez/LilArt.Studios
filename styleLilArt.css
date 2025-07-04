@@ -24,15 +24,16 @@ header {
 ul li{
   font-size: 20px;
 }
-.video-nails{
-  height: 100vw;
-}
+
+
 
 /*CAROUSEL*/
-.object-fit-cover {
+#carousel-triple img {
+  aspect-ratio: 3 / 4;
+  width: 100%;
   object-fit: cover;
+  border-radius: 12px;
 }
-
 /* personaliza los indicadores (dots) */
 #carouselExampleFade .carousel-indicators [data-bs-target] {
   width: 12px;
