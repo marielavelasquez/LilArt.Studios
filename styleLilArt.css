@@ -25,41 +25,23 @@ ul li{
   font-size: 20px;
 }
 
-
+/*HERO*/
+#btn-go-reservar{
+  margin-bottom: 25px;
+}
 
 /*CAROUSEL*/
+
+#carouselMulti {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
 #carousel-triple img {
-  aspect-ratio: 3 / 4;
   width: 100%;
   object-fit: cover;
-  border-radius: 12px;
-}
-/* personaliza los indicadores (dots) */
-#carouselExampleFade .carousel-indicators [data-bs-target] {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: rgba(255,255,255,0.7);
-}
-
-#carouselExampleFade .carousel-indicators .active {
-  background-color: #a1512c; 
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  width: 3rem;
-  height: 3rem;
-  background-size: 3rem 3rem;
-}
-
-#carousel-crossfade .btn-outline-primary {
-  border-color: #a1512c;
-  color: white;
-}
-#carousel-crossfade .btn-outline-primary:hover {
-  background-color: #a1512c;
-  color: #fff;
+  max-width: 300px;
 }
 
 .btn {
