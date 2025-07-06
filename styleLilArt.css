@@ -99,8 +99,18 @@ ul li {
 .wrap-form{
   justify-content: center;
   padding: 10px 20px;
+  margin: 0 auto;
 }
 .wrap-form h2{
   text-align: center;
   margin-bottom: 20px;
+}
+
+.btn-send{
+  display: flex;
+  justify-content: center;
+}
+.send-form{
+  width: 100%;
+  max-width: 1000px;
 }
