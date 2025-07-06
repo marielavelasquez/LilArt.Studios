@@ -66,6 +66,11 @@ ul li {
     max-width: 380px !important;
     object-fit: contain !important;
   }
+
+  .send-form{
+  width: 100%;
+  max-width: 1000px;
+}
 }
 
 #carouselMulti {
@@ -110,7 +115,8 @@ ul li {
   display: flex;
   justify-content: center;
 }
+/*
 .send-form{
   width: 100%;
-  max-width: 1000px;
+  max-width: 500px;
 }
