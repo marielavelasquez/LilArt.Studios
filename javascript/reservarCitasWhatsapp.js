@@ -45,7 +45,7 @@ daySelect.addEventListener("change", () => {
 })
 
 // Capturar el formulario y controlar el envío
-const form = document.querySelector(".form-reserva");
+const form = document.querySelector(".whatsapp-form");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault(); // evita que recargue la página

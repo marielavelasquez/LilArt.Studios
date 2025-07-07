@@ -39,25 +39,6 @@
                             <a class="nav-link" href="#top-web">Inicio</a>
                         </li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false" id="contactoDropdown1">
-                                Servicios
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="contactoDropdown1">
-                                <li><a class="dropdown-item" href="#">Manicura</a></li>
-                                <li><a class="dropdown-item" href="#">Semipermanente</a></li>
-                                <li><a class="dropdown-item" href="#">Manicura Acrílica</a></li>
-                                <li><a class="dropdown-item" href="#">Manicura de Gel</a></li>
-                                <li><a class="dropdown-item" href="#">Manicura de Porcelana</a></li>
-                                <li><a class="dropdown-item" href="#">Manicura Rusal</a></li>
-                                <li><a class="dropdown-item" href="#">Manicura con Polygel</a></li>
-                                <li><a class="dropdown-item" href="#">Manicura Japonesa</a></li>
-                                <li><a class="dropdown-item" href="#">Nail Ar</a></li>
-                                <li><a class="dropdown-item" href="#">Stiletto</a></li>
-                            </ul>
-                        </li>
-
                         <li class="nav-item">
                             <a class="nav-link" href="#gallery">Galería</a>
                         </li>
@@ -102,7 +83,7 @@
 
 
     <section id="hero" class="py-5">
-        <div class="container my-hero-container">
+        <div class="container">
             <div class="row align-items-center">
                 <div class="col-12 col-md-6 text-center text-md-start">
                     <h2 class="display-6 my-hero-title">Uñas que hablan por ti</h2>
@@ -111,7 +92,7 @@
                     <button id="btn-go-reservar" class="btn my-hero-btn">Reservar una cita</button>
                 </div>
                 <div class="col-12 col-md-6 text-center">
-                    <img src="images.img/FotoHero/mujer.jpg" alt="Uñas elegantes" class="img-fluid rounded my-hero-img">
+                    <img src="images.img/FotoHero/mujer.jpg" alt="Uñas elegantes" class="img-fluid rounded">
                 </div>
             </div>
         </div>
@@ -126,8 +107,9 @@
             <div class="row  align-items-center justify-content-center">
                 <div class="container"></div>
                 <div class="col-12 col-md-8 col-lg-5 d-flex justify-content-center">
-                    <div class="w-100 rounded" style="max-width: 360px;">
-                        <video autoplay muted loop playsinline class="w-100 object-fit-cover rounded">
+                    <div class="w-100 rounded video-nails">
+                        <video autoplay muted loop playsinline 
+                        class="w-100 object-fit-cover rounded video-nails">
                             <source src="images.img/video-area/esmaltes.mp4" type="video/mp4">
                             Tu navegador no soporta video.
                         </video>
@@ -225,23 +207,36 @@
                             <select id="system" class="form-select">
                                 <option selected>Elige un servicio</option>
                                 <option value="Manicura">Manicura – 20 €</option>
-                                …
+                                <option value="Manicura">Permanente – 20 €</option>
+                                <option value="Manicura">Acrílica – 20 €</option>
+                                <option value="Manicura">Gel – 20 €</option>
+                                <option value="Manicura">Manicura Porcelana – 20 €</option>
+                                <option value="Manicura">Manicura Rusa – 20 €</option>
+                                <option value="Manicura">Manicura PolyGel – 20 €</option>
+                                <option value="Manicura">Manicura Japonesa – 20 €</option>
+                                <option value="Manicura">Manicura Personalizada – 20 €</option>
                             </select>
                         </div>
                         <div class="col-6">
                             <label for="day" class="form-label">Fecha</label>
-                            <select id="day" class="form-select" required></select>
+                            <select id="day" class="form-select" required>
+                                <option value="">Elige una Fecha</option>
+                            </select>
                         </div>
                         <div class="col-6">
                             <label for="hour" class="form-label">Hora</label>
-                            <select id="hour" class="form-select" required></select>
+                            <select id="hour" class="form-select" required>
+                                <option value="">Primero elige una Fecha</option>
+                            </select>
                         </div>
                         <div class="col-12">
-                            <label for="reference" class="form-label">¿Cómo llegaste?</label>
+                            <label for="reference" class="form-label">¿Cómo llegaste hasta aquí?</label>
                             <select id="reference" class="form-select" required>
                                 <option selected>Elige una opción</option>
                                 <option value="Instagram">Instagram</option>
-                                …
+                                <option value="Instagram">Facebook</option>
+                                <option value="Instagram">TikTok</option>
+                                <option value="Instagram">Recomendación</option>
                             </select>
                         </div>
                         <div class="col-12">
@@ -249,7 +244,7 @@
                             <textarea id="comment" class="form-control" rows="3"></textarea>
                         </div>
                         <div class="col-12 text-end btn-send">
-                            <button type="submit" class="btn send-form ">Reservar una cita</button>
+                            <button type="submit" class="btn">Reservar una cita</button>
                         </div>
                     </form>
                 </div>
