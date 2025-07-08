@@ -14,11 +14,7 @@ header {
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.082);
 }
 
-.container {
-  padding: 10px 20px;
-  max-width: 1300px;
-  margin: 0 auto;
-}
+
 
 h2 {
   font-family: "Libertinus Mono", monospace;
@@ -29,7 +25,7 @@ h2 {
 
 
 ul li {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 /*HERO*/
@@ -37,16 +33,18 @@ ul li {
   margin-bottom: 25px;
 }
 
-/*MOVILE*/
+/*MOBILE*/
 
 @media (max-width: 768px) {
+
   .send-form{
   width: 100%;
   max-width: 1000px;
 }
-
-
 }
+
+/*.....................................................................................*/
+
 .video-nails{
 max-width: 370px;
 }
@@ -54,6 +52,11 @@ max-width: 370px;
 
 
 /*CAROUSEL*/
+#crousel-triple{
+  justify-content: center;
+  padding: 10px 20px;
+  margin: 0 auto;
+}
 
 #carouselMulti {
   max-width: 1000px;

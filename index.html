@@ -14,7 +14,7 @@
 </head>
 
 <body id="top-web">
-    <header class="sticky-top bg-white shadow-sm bg-opacity-50" >
+    <header class="sticky-top bg-white shadow-sm">
         <nav class="navbar navbar-expand-lg">
             <div class="container">
 
@@ -40,7 +40,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#gallery">Galería</a>
+                            <a class="nav-link" href="#carousel-triple">Galería</a>
                         </li>
 
                         <li class="nav-item">
@@ -108,8 +108,7 @@
                 <div class="container"></div>
                 <div class="col-12 col-md-8 col-lg-5 d-flex justify-content-center">
                     <div class="w-100 rounded video-nails">
-                        <video autoplay muted loop playsinline 
-                        class="w-100 object-fit-cover rounded video-nails">
+                        <video autoplay muted loop playsinline class="w-100 object-fit-cover rounded video-nails">
                             <source src="images.img/video-area/esmaltes.mp4" type="video/mp4">
                             Tu navegador no soporta video.
                         </video>
@@ -137,10 +136,11 @@
     <!--Carousel--><!--Carousel--><!--Carousel--><!--Carousel--><!--Carousel-->
 
     <section id="carousel-triple" class="py-5">
-        <h2 class="text-center mb-4">Trabajos realizados</h2>
 
-        <div id="carouselMulti" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"
+        <div id="carouselMulti" class="carousel slide py-5" data-bs-ride="carousel" data-bs-interval="4000"
             data-bs-touch="true" data-bs-pause="hover">
+
+            <h2 class="text-center mb-4 py-5">Trabajos realizados</h2>
 
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -187,9 +187,9 @@
     <section id="form-reserve" class="py-5">
         <div>
             <div class="row gy-4 wrap-form">
-                <div class="col-12 col-lg-6"  >
+                <div class="col-12 col-lg-6">
                     <h2>Reservar una cita con Lilibeth</h2>
-                    <form id="whatsapp-form" class="row g-3" >
+                    <form id="whatsapp-form" class="row g-3">
                         <div class="col-12">
                             <label for="name" class="form-label">Nombre completo</label>
                             <input type="text" class="form-control" id="name" required>
@@ -244,7 +244,7 @@
                             <textarea id="comment" class="form-control" rows="3"></textarea>
                         </div>
                         <div class="col-12 text-end btn-send">
-                            <button type="submit" class="btn">Reservar una cita</button>
+                            <button type="submit" class="btn send-form">Reservar una cita</button>
                         </div>
                     </form>
                 </div>
