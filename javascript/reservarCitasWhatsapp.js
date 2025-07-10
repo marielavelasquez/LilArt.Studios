@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+
   const fechasDisponibles = {
     "2025-06-15": ["10:00", "12:00", "15:30"],
     "2025-06-18": ["09:00", "11:30", "17:00"],
@@ -72,23 +73,25 @@ document.addEventListener("DOMContentLoaded", function () {
     const tituloEvento = `Reserva LilArt Studios - ${name}`;
     const descripcionEvento = `Sistema: ${system}\nComentario: ${comment}\n¿Cómo llegó?: ${reference}\nEmail: ${email}\nTeléfono: ${phone}`;
 
-    const linkGoogleCalendar = crearLinkGoogleCalendar(date, hour, 1, tituloEvento, descripcionEvento);
+    const urlGoogleCalendar = crearLinkGoogleCalendar(date, hour, 1, tituloEvento, descripcionEvento);
+    const intentUrl = urlGoogleCalendar.replace('https://', 'intent://') + '#Intent;scheme=https;package=com.google.android.calendar;end';
 
     const message = `¡Hola! Nueva reserva
 
-Nombre: ${name}
-Email: ${email}
-Teléfono: ${phone}
-Fecha: ${date}
-Hora: ${hour}
-Sistema: ${system}
-¿Cómo llegó hasta aquí?: ${reference}
-Comentario: ${comment}
+        Nombre: ${name}
+        Email: ${email}
+        Teléfono: ${phone}
+        Fecha: ${date}
+        Hora: ${hour}
+        Sistema: ${system}
+        ¿Cómo llegó hasta aquí?: ${reference}
+        Comentario: ${comment}
+        
+        Abrir Google Calendar en web: ${urlGoogleCalendar}
+        Abrir Google Calendar en app Android: ${intentUrl}
+        `;
 
-Agregar al calendario: ${linkGoogleCalendar}
-`;
-
-    const phoneNumber = "34624643500"; 
+    const phoneNumber = "34624643500";
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
     window.open(whatsappURL, "_blank");

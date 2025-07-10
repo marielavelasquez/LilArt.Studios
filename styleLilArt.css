@@ -33,26 +33,16 @@ ul li {
   margin-bottom: 25px;
 }
 
-/*MOBILE*/
-
-@media (max-width: 768px) {
-
-  .send-form{
-  width: 100%;
-  max-width: 1000px;
-}
-}
-
 /*.....................................................................................*/
 
-.video-nails{
-max-width: 370px;
+.video-nails {
+  max-width: 370px;
 }
 
 
 
 /*CAROUSEL*/
-#crousel-triple{
+#crousel-triple {
   justify-content: center;
   padding: 10px 20px;
   margin: 0 auto;
@@ -87,19 +77,65 @@ max-width: 370px;
 }
 
 
-/*FOR*/
+/*FORM*/
 
-.wrap-form{
+.wrap-form {
   justify-content: center;
   padding: 10px 20px;
   margin: 0 auto;
 }
-.wrap-form h2{
+
+.wrap-form h2 {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.btn-send{
+.btn-send {
   display: flex;
   justify-content: center;
+}
+
+
+/*MOBILE*/
+
+@media (max-width: 768px) {
+
+  #carousel-triple {
+    display: none;
+  }
+
+  #carouselMobile .carousel-item {
+  height: 600px; 
+}
+
+  /* Limita el ancho para que no ocupe todo el viewport */
+  .gallery-mobile {
+    max-width: 330px;
+    margin: 0 auto;
+  }
+
+  /* Asegura que la imagen respete proporción */
+  #carouselMobile .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+  }
+
+  /* Esconde flechas si por alguna razón aparecieran */
+  #carouselMobile .carousel-control-prev,
+  #carouselMobile .carousel-control-next {
+    display: none !important;
+  }
+
+  /* Opcional: quita scroll bar en WebKit */
+  #carouselMobile .carousel-inner {
+    overflow-x: hidden;
+  }
+
+  .send-form {
+    width: 100%;
+    max-width: 1000px;
+  }
 }
