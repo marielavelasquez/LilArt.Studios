@@ -2,10 +2,10 @@ body {
   margin: 0;
   font-family: 'Arial', sans-serif;
   padding: 0;
-  background-image: url('images.img/fondo/esmalte-rosa.jpeg');
+  background-image: url('images.img/fondo/esmalte-marron-gris.png');
   background-size: cover;
   background-position: center;
-  backdrop-filter: blur(1px);
+  backdrop-filter: blur(6px);
   background-repeat: no-repeat;
 }
 
@@ -25,13 +25,9 @@ h2 {
 
 
 ul li {
-  font-size: 22px;
+  font-size: 20px;
 }
 
-/*HERO*/
-#btn-go-reservar {
-  margin-bottom: 25px;
-}
 
 /*.....................................................................................*/
 
@@ -42,6 +38,12 @@ ul li {
 
 
 /*CAROUSEL*/
+ .carousel-text{
+  padding-bottom: 15px;
+  padding-top: 60px;
+  text-align: center;
+ }
+
 #crousel-triple {
   justify-content: center;
   padding: 10px 20px;
@@ -62,18 +64,11 @@ ul li {
 
 
 .btn {
-  background-color: #6d4920cc;
-  color: white;
   padding: 12px 24px;
   border: none;
   border-radius: 30px;
-  text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #a1512c;
 }
 
 
@@ -100,13 +95,19 @@ ul li {
 
 @media (max-width: 768px) {
 
-  #carousel-triple {
+  #carouselMulti {
     display: none;
   }
 
+  #carouselMobile {
+    display: flex;
+
+  }
+
   #carouselMobile .carousel-item {
-  height: 600px; 
-}
+    height: 500px;
+  }
+
 
   /* Limita el ancho para que no ocupe todo el viewport */
   .gallery-mobile {
@@ -119,8 +120,9 @@ ul li {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
     border-radius: 12px;
+    display: flex;
+    justify-self: center;
   }
 
   /* Esconde flechas si por alguna razón aparecieran */
@@ -138,4 +140,12 @@ ul li {
     width: 100%;
     max-width: 1000px;
   }
+}
+
+@media (min-width: 768px) {
+
+  #carouselMobile {
+    display: none;
+  }
+
 }
