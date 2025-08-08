@@ -1,25 +1,20 @@
 //boton que al hacer click te lleva a la seccion de servicios
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
+  const section = document.getElementById("form-reserve");
+  if (!section) return;
 
-  const button = document.getElementById("btn-go-reservar");
+  const buttonIds = [
+    "btn-go-reservar",
+    "btn-go-reservar2",
+    "btn-go-reservar3",
+  ];
 
-  button.addEventListener("click", function () {
-    const section = document.getElementById("form-reserve");
-    section.scrollIntoView({ behavior: "smooth" });
-  });
+  for (const id of buttonIds) {
+    const button = document.getElementById(id);
+    if (!button) continue;
 
+    button.addEventListener("click", () => {
+      section.scrollIntoView({ behavior: "smooth" });
+    });
+  }
 });
- 
-  const seconButton = document.getElementById("btn-go-reservar2");
-  
-  seconButton.addEventListener("click", function (){
-    const section = document.getElementById("form-reserve");
-    section.scrollIntoView({ behavior: "smooth"})
-  });
-
-  const thirdButton = document.getElementById("btn-go-reservar3");
-
-  thirdButton.addEventListener("click", function (){
-    const section = document.getElementById("form-reserve");
-    section.scrollIntoView({bahavior: "smooth"})
-  });
