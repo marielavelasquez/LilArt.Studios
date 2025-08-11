@@ -2,11 +2,22 @@ body {
   margin: 0;
   font-family: 'Arial', sans-serif;
   padding: 0;
-  background-image: url('images.img/fondo/esmalte-marron-gris.png');
-  background-size: cover;
-  background-position: center;
-  backdrop-filter: blur(6px);
-  background-repeat: no-repeat;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body.light-mode {
+  --background-color: #ffffff;
+  --text-color: #501d06;
+  --hover-color: #a85b3b;
+  --footer-border-color: rgba(80, 29, 6, 0.2);
+}
+
+body.dark-mode {
+  --background-color: #212529;
+  --text-color: #f8f9fa;
+  --hover-color: #a85b3b;
+  --footer-border-color: rgba(248, 249, 250, 0.2);
 }
 
 header {
@@ -19,7 +30,7 @@ header {
 h2 {
   font-family: "Libertinus Mono", monospace;
   font-style: normal;
-  color: #501d06;
+  color: var(--text-color);
   font-size: 30px;
   font-weight: 500;
 }
@@ -184,18 +195,18 @@ margin-bottom: 20px;
 
 .my-footer {
   backdrop-filter: blur(5px);
-  border-top: 1px solid rgba(80, 29, 6, 0.2); 
-  color: #501d06;
+  border-top: 1px solid var(--footer-border-color);
+  color: var(--text-color);
   font-size: 16px;
 }
 
 .footer-link {
-  color: #501d06;
+  color: var(--text-color);
   text-decoration: none;
 }
 
 .footer-link:hover {
-  color: #a85b3b;
+  color: var(--hover-color);
 }
 
 .accordion-item {
@@ -206,11 +217,11 @@ margin-bottom: 20px;
 
 .accordion-button {
   background-color: transparent;
-  color: #501d06;
+  color: var(--text-color);
   font-weight: bold;
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: rgba(255, 255, 255, 0.25); /* cuando está abierto */
-  color: #501d06;
+  background-color: rgba(255, 255, 255, 0.25); /* when open */
+  color: var(--text-color);
 }
