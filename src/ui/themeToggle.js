@@ -4,7 +4,7 @@ const themeToggleButton = document.getElementById('theme-toggle');
 const applyTheme = (theme) => {
   document.body.classList.remove('light-mode', 'dark-mode');
   document.body.classList.add(`${theme}-mode`);
-  themeToggleButton.textContent = theme === 'dark' ? '☀️' : '🌙';
+  themeToggleButton.textContent = theme === 'dark' ? '☼' : '☾';
 };
 
 const savedTheme = localStorage.getItem('theme') || 'light';

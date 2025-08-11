@@ -7,24 +7,22 @@ body {
 }
 
 body.light-mode {
-  --background-color: #ffffff;
+  --background-color: #b8aeaa5d;
   --text-color: #501d06;
   --hover-color: #a85b3b;
   --footer-border-color: rgba(80, 29, 6, 0.2);
 }
 
 body.dark-mode {
-  --background-color: #212529;
-  --text-color: #f8f9fa;
+  --background-color: #000000ec;
+  --text-color: #ffffffc7;
   --hover-color: #a85b3b;
-  --footer-border-color: rgba(248, 249, 250, 0.2);
+  --footer-border-color: rgba(37, 25, 25, 0.884);
 }
 
-header {
-  padding: 0px;
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.082);
+.nav-item-color{
+  color: var(--text-color);
 }
-
 
 
 h2 {
@@ -40,6 +38,10 @@ ul li {
   font-size: 20px;
 }
 
+#theme-toggle {
+  font-size: 2rem;
+  padding: 0 1rem 0 1rem;
+}
 
 /*........................................hero.............................................*/
 #btn-go-reservar{
