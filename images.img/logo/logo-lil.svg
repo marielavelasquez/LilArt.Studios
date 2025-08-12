@@ -1,0 +1,42 @@
+<svg width="120" height="140" viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg">
+  <!-- LS Letters -->
+  <g class="logo-letters" fill="var(--logo-color, #B8956D)">
+    <!-- L Letter -->
+    <path d="M8 8 L8 84 L38 84 L38 72 L22 72 L22 8 Z"/>
+    
+    <!-- S Letter -->
+    <path d="M50 38 C50 28, 58 20, 68 20 L92 20 C102 20, 110 28, 110 38 L110 44 C110 50, 106 54, 100 56 L80 62 C74 64, 70 68, 70 74 L70 82 C70 88, 74 92, 80 92 L100 92 C106 92, 110 88, 110 82 L110 78 L98 78 L98 80 C98 81, 97 82, 96 82 L84 82 C83 82, 82 81, 82 80 L82 76 C82 74, 84 72, 86 71 L106 65 C112 63, 116 57, 116 50 L116 36 C116 22, 106 12, 92 12 L68 12 C54 12, 44 22, 44 36 L44 40 L56 40 L56 38 Z"/>
+  </g>
+  
+  <!-- Script text -->
+  <g class="script-text" fill="var(--script-color, #333)" font-family="cursive" font-size="14" font-style="italic">
+    <text x="15" y="108" class="script-lil">LilArt</text>
+    <text x="55" y="108" class="script-studios">Studios</text>
+  </g>
+  
+  <!-- Decorative underline -->
+  <path d="M15 112 Q60 118, 105 112" stroke="var(--script-color, #333)" stroke-width="1" fill="none" class="underline"/>
+  
+  <style>
+    .logo-letters {
+      fill: var(--logo-color, #B8956D);
+    }
+    
+    .script-text, .underline {
+      fill: var(--script-color, #333);
+      stroke: var(--script-color, #333);
+    }
+    
+    /* Dark mode adjustments */
+    @media (prefers-color-scheme: dark) {
+      .logo-letters {
+        fill: var(--logo-color, #D4B896);
+      }
+      
+      .script-text, .underline {
+        fill: var(--script-color, #fff);
+        stroke: var(--script-color, #fff);
+      }
+    }
+  </style>
+</svg>

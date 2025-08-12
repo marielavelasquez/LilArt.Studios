@@ -7,21 +7,68 @@ body {
 }
 
 body.light-mode {
-  --background-color: #b8aeaa5d;
+  --background-color: #eecfc25d;
   --text-color: #501d06;
   --hover-color: #a85b3b;
   --footer-border-color: rgba(80, 29, 6, 0.2);
+  --navbar-background: rgba(255, 248, 245, 0.95);
+  --logo-color: #B8956D;
+  --script-color: #501d06;
 }
 
 body.dark-mode {
   --background-color: #000000ec;
   --text-color: #ffffffc7;
-  --hover-color: #a85b3b;
+  --hover-color: #ffffff;
   --footer-border-color: rgba(37, 25, 25, 0.884);
+  --navbar-background: rgba(0, 0, 0, 0.95);
+  --logo-color: #D4B896;
+  --script-color: #ffffffc7;
+}
+
+.nav-bar {
+  background-color: var(--navbar-background);
 }
 
 .nav-item-color{
   color: var(--text-color);
+}
+
+/* Navigation hover effects */
+.nav-link:hover {
+  color: var(--hover-color) !important;
+}
+
+.dropdown-item:hover {
+  color: var(--hover-color) !important;
+}
+
+/* Fix dropdown toggle active/focus states */
+.nav-link.dropdown-toggle:active,
+.nav-link.dropdown-toggle:focus,
+.nav-link.dropdown-toggle.show {
+  color: var(--text-color) !important;
+}
+
+/* Ensure dropdown items maintain proper colors */
+.dropdown-item:active,
+.dropdown-item:focus {
+  color: var(--text-color) !important;
+  background-color: transparent !important;
+}
+
+/* Dropdown menu styling for dark mode */
+body.dark-mode .dropdown-menu {
+  background-color: var(--background-color);
+  border: 1px solid var(--footer-border-color);
+}
+
+body.dark-mode .dropdown-item {
+  color: var(--text-color);
+}
+
+body.dark-mode .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 
@@ -66,6 +113,32 @@ margin-bottom: 20px;
   padding-top: 60px;
   text-align: center;
  }
+
+/* Carousel arrow visibility fixes */
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+}
+
+/* Ensure arrows are visible in light mode */
+body.light-mode .carousel-control-prev-icon,
+body.light-mode .carousel-control-next-icon {
+  filter: invert(1) grayscale(100%);
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+/* Keep arrows visible in dark mode */
+body.dark-mode .carousel-control-prev-icon,
+body.dark-mode .carousel-control-next-icon {
+  filter: invert(0);
+}
 
 #crousel-triple {
   justify-content: center;
