@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../javaS"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "LilArt.Studios"
+	}
+}
