@@ -34,6 +34,34 @@ body.dark-mode {
   color: var(--text-color);
 }
 
+/* Logo styling */
+.logo-light, .logo-dark {
+  width: 80px !important;
+  height: auto !important;
+  max-width: 80px !important;
+}
+
+@media (min-width: 768px) {
+  .logo-light, .logo-dark {
+    width: 100px !important;
+    max-width: 100px !important;
+  }
+}
+
+/* Logo theme switching */
+.light-mode .logo-dark {
+  display: none;
+}
+
+.dark-mode .logo-light {
+  display: none;
+}
+
+/* Default state (light mode) */
+.logo-dark {
+  display: none;
+}
+
 /* Navigation hover effects */
 .nav-link:hover {
   color: var(--hover-color) !important;
