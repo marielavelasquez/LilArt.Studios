@@ -71,7 +71,7 @@ body.dark-mode .navbar .nav-link[aria-current="page"] {
 
 /* Footer logo sizing */
 .logo-light-bottom, .logo-dark-bottom {
-  max-width: 80px;
+  max-width: 150px;
   height: auto;
 }
 
