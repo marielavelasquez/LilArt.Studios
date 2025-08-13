@@ -36,16 +36,11 @@ body.dark-mode {
 
 /* Logo styling */
 .logo-light, .logo-dark {
-  width: 80px !important;
-  height: auto !important;
-  max-width: 80px !important;
-}
-
-@media (min-width: 768px) {
-  .logo-light, .logo-dark {
-    width: 100px !important;
-    max-width: 100px !important;
-  }
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin: 5px;
+  padding: 0;
 }
 
 /* Logo theme switching */
@@ -57,10 +52,7 @@ body.dark-mode {
   display: none;
 }
 
-/* Default state (light mode) */
-.logo-dark {
-  display: none;
-}
+
 
 /* Navigation hover effects */
 .nav-link:hover {
@@ -69,6 +61,24 @@ body.dark-mode {
 
 .dropdown-item:hover {
   color: var(--hover-color) !important;
+}
+
+/* Burger menu (navbar-toggler) styling for theme support */
+.navbar-toggler {
+  border: 1px solid var(--text-color);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Dark mode burger menu */
+.dark-mode .navbar-toggler {
+  border: 1px solid var(--text-color);
+}
+
+.dark-mode .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 /* Fix dropdown toggle active/focus states */
@@ -275,11 +285,12 @@ body.dark-mode .carousel-control-next-icon {
   width: 85%;
 }
 
-.video-nails{
+.v-nails-conatiner{
   max-width: 85%;
   width: 100%;
   max-height: 50%;
   height: 100%;
+  align-content: center;
 }
 
 }
