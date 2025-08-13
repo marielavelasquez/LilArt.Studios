@@ -26,6 +26,14 @@ body.dark-mode {
   --script-color: #ffffffc7;
 }
 
+body.dark-mode .navbar .nav-link:hover,
+body.dark-mode .navbar .nav-link:focus,
+body.dark-mode .navbar .nav-link:active,
+body.dark-mode .navbar .nav-link.show,
+body.dark-mode .navbar .nav-link[aria-current="page"] {
+  color: #fff !important;
+}
+
 .nav-bar {
   background-color: var(--navbar-background);
 }
@@ -52,7 +60,20 @@ body.dark-mode {
   display: none;
 }
 
+/* Footer logo theme switching */
+.light-mode .logo-dark-bottom {
+  display: none;
+}
 
+.dark-mode .logo-light-bottom {
+  display: none;
+}
+
+/* Footer logo sizing */
+.logo-light-bottom, .logo-dark-bottom {
+  max-width: 80px;
+  height: auto;
+}
 
 /* Navigation hover effects */
 .nav-link:hover {
