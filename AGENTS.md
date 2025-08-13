@@ -1,37 +1,34 @@
-[AGENTS.md](https://github.com/user-attachments/files/21714564/AGENTS.md)
-# AGENTS.md — LilArt.Studios (arquitectura hexagonal front‑end “lite”)
+## 🎯 Project Objective
+Static website for **LilArt.Studios** that:
+- Displays work (gallery/carousel) and a hero section.
+- Provides clear CTAs to **Book**.
+- Allows **booking an appointment** by sending data via **WhatsApp** and adding event to **Google Calendar**.
+- Maintains **responsive design** with Bootstrap 5.
 
-## 🎯 Objetivo del proyecto
-Sitio estático para **LilArt.Studios** que:
-- Muestra trabajos (galería/carrusel) y una sección hero.
-- Ofrece CTA claros para **Reservar**.
-- Permite **reservar una cita** enviando datos por **WhatsApp** y añadiendo evento a **Google Calendar**.
-- Mantiene **diseño responsive** con Bootstrap 5.
-
-**Nota de idioma:** El **código** (nombres de clases CSS, IDs, variables, funciones y comentarios internos) **debe estar en inglés**. El **contenido visible** de la página (textos, labels, placeholders) **debe estar en español**.
+**Language Note:** The **code** (CSS class names, IDs, variables, functions and internal comments) **must be in English**. The **visible content** of the page (texts, labels, placeholders) **must be in Spanish**.
 
 ---
 
-## 📦 Estado actual (mantener funcional)
-Archivos principales (no romper su comportamiento):
-- `index.html` — página principal (hero, carrusel, formulario, footer).
-- `styleLilArt.css` — hoja de estilos global.
-- `btnGoReservar.js` — botones que hacen scroll suave a la sección de reservas.
-- `navBar.js` — comportamiento del menú responsive (colapso/scroll controlado).
-- `phoneOnlyNumber.js` — sanitiza el input de teléfono a solo números.
-- `reservarCitasWhatsapp.js` — llena fechas/horas, arma mensajes y enlaces de WhatsApp y Google Calendar.
-- `images.img/…` — recursos de imágenes y video.
-- (Opcional según repo) `carousel.js` — lógica específica de carrusel si existe.
+## 📦 Current State (keep functional)
+Main files (do not break their behavior):
+- `index.html` — main page (hero, carousel, form, footer).
+- `styleLilArt.css` — global stylesheet.
+- `btnGoReservar.js` — buttons that smooth scroll to reservation section.
+- `navBar.js` — responsive menu behavior (collapse/controlled scroll).
+- `phoneOnlyNumber.js` — sanitizes phone input to numbers only.
+- `reservarCitasWhatsapp.js` — populates dates/times, builds WhatsApp and Google Calendar messages and links.
+- `images.img/…` — image and video resources.
+- (Optional per repo) `carousel.js` — specific carousel logic if exists.
 
-Reglas duras actuales:
-- No introducir **errores en consola**.
-- No romper rutas existentes de imágenes/videos.
-- No romper compatibilidad con **Bootstrap 5.3.7** (CDN).
+Current hard rules:
+- Do not introduce **console errors**.
+- Do not break existing image/video paths.
+- Do not break compatibility with **Bootstrap 5.3.7** (CDN).
 
 ---
 
-## 🧱 Arquitectura objetivo (hexagonal “lite”)
-Aplicar separación por capas sin complicar innecesariamente un front‑end estático:
+## 🧱 Target Architecture (hexagonal "lite")
+Apply layer separation without unnecessarily complicating a static front-end:
 
 ```
 /public
@@ -43,21 +40,21 @@ Aplicar separación por capas sin complicar innecesariamente un front‑end est�
     /video
 
 /src
-  /domain                 # reglas/validaciones puras (sin DOM)
+  /domain                 # pure rules/validations (no DOM)
     validators.js
     reservation.js
 
-  /application            # casos de uso (sin DOM)
+  /application            # use cases (no DOM)
     createReservation.js
     listSlots.js
 
-  /infrastructure         # adaptadores a servicios/entornos
+  /infrastructure         # adapters to services/environments
     whatsappGateway.js
     calendarGateway.js
-    storageGateway.js     # (opcional futuro)
+    storageGateway.js     # (optional future)
 
-  /ui                     # interacción con el DOM/Bootstrap
-    main.js               # punto de entrada (ESM)
+  /ui                     # DOM/Bootstrap interaction
+    main.js               # entry point (ESM)
     navBar.js
     scrollButtons.js
     phoneOnlyNumber.js
@@ -65,84 +62,84 @@ Aplicar separación por capas sin complicar innecesariamente un front‑end est�
     carousel.js
 ```
 
-**Principios clave**
-- `domain` y `application` **no** tocan el DOM ni `window`/`document`.
-- `ui` solo maneja DOM y delega lógica a `application`/`domain`.
-- `infrastructure` encapsula efectos externos (WhatsApp, Calendar, storage/fetch).
-- Flujos de dependencia: `ui → application → domain`, y `application ↔ infrastructure` mediante funciones. Nunca al revés.
+**Key Principles**
+- `domain` and `application` **do not** touch DOM or `window`/`document`.
+- `ui` only handles DOM and delegates logic to `application`/`domain`.
+- `infrastructure` encapsulates external effects (WhatsApp, Calendar, storage/fetch).
+- Dependency flows: `ui → application → domain`, and `application ↔ infrastructure` via functions. Never backwards.
 
 ---
 
-## 🚦 Políticas de migración (incremental, sin romper)
-1) Crear `src/ui/main.js` y cargarlo con `<script type="module">` en `index.html`. Importar desde ahí los módulos UI existentes (nav, scroll, phoneOnlyNumber, reservationForm).
-2) Extraer a `infrastructure` la creación de enlaces (WhatsApp y Google Calendar).
-3) Extraer validaciones y formateos a `domain` (ej.: `isValidPhone`, `formatDate`, `formatTime`).
-4) Crear casos de uso en `application` (ej.: `createReservation(data)` que valida, arma enlaces y devuelve resultados para que `ui` los use).
-5) Mantener PRs pequeños con títulos claros: `[refactor]`, `[feat]`, `[fix]`, `[docs]` y descripción breve de *qué* cambió y *por qué*.
+## 🚦 Migration Policies (incremental, non-breaking)
+1) Create `src/ui/main.js` and load it with `<script type="module">` in `index.html`. Import existing UI modules from there (nav, scroll, phoneOnlyNumber, reservationForm).
+2) Extract link creation (WhatsApp and Google Calendar) to `infrastructure`.
+3) Extract validations and formatting to `domain` (e.g.: `isValidPhone`, `formatDate`, `formatTime`).
+4) Create use cases in `application` (e.g.: `createReservation(data)` that validates, builds links and returns results for `ui` to use).
+5) Keep small PRs with clear titles: `[refactor]`, `[feat]`, `[fix]`, `[docs]` and brief description of *what* changed and *why*.
 
-Cada PR debe confirmar:
-- ✅ Misma funcionalidad visible (no cambios inesperados).
-- ✅ Sin errores en consola (desktop y móvil).
-- ✅ Rutas de assets intactas o actualizadas correctamente.
-- ✅ Bootstrap 5 funcionando.
-
----
-
-## 🛠️ Convenciones de código
-- **Idioma**: *code in English*, *UI copy in Spanish*.
-- **JS**: ES Modules (usar `type="module"`), `const`/`let`, arrow functions cuando tenga sentido.
-- **Strings**: usar **template strings** (``${...}``) en lugar de concatenación con `+`.
-- **CSS**: clases en **kebab-case** (`.submit-button`), IDs solo si son necesarios y únicos.
-- **Ficheros**: nombres en kebab-case (`reservation-form.js`, `whatsapp-gateway.js`).
-- **Comentarios internos** en inglés, claros y concisos.
-- Evitar duplicación: factorizar utilidades.
-- Nada de estilos inline si puede ir en CSS.
+Each PR must confirm:
+- ✅ Same visible functionality (no unexpected changes).
+- ✅ No console errors (desktop and mobile).
+- ✅ Asset paths intact or correctly updated.
+- ✅ Bootstrap 5 working.
 
 ---
 
-## 📋 Reglas de trabajo para agentes
-- Mantener **separación**: HTML (estructura), CSS (estilos), JS (comportamiento).
-- No añadir librerías pesadas sin justificar (tamaño, rendimiento, accesibilidad).
-- Antes de borrar o renombrar funciones, **explicar en el PR** el motivo.
-- Antes de reestructurar, **describir** el plan y el impacto (breve).
-- Mantener accesibilidad básica (labels, `aria-*`, foco navegable).
+## 🛠️ Code Conventions
+- **Language**: *code in English*, *UI copy in Spanish*.
+- **JS**: ES Modules (use `type="module"`), `const`/`let`, arrow functions when it makes sense.
+- **Strings**: use **template literals** (``${...}``) instead of concatenation with `+`.
+- **CSS**: classes in **kebab-case** (`.submit-button`), IDs only if necessary and unique.
+- **Files**: names in kebab-case (`reservation-form.js`, `whatsapp-gateway.js`).
+- **Internal comments** in English, clear and concise.
+- Avoid duplication: factor out utilities.
+- No inline styles if it can go in CSS.
 
 ---
 
-## ✅ Checklist de verificación manual
-- `index.html` carga sin errores (incluyendo CDN de Bootstrap).
-- Menú responsive funciona (abrir/cerrar; scroll a secciones).
-- Botones **Reservar** hacen scroll suave a la sección del formulario.
-- Formulario: teléfono solo números, selección de fecha/hora correcta.
-- WhatsApp se abre con los datos correctos (URL codificado).
-- Google Calendar crea evento (web y deep link Android si aplica).
-- Carrusel y video se muestran y no rompen el layout.
-- **Consola limpia** (sin errores ni warnings críticos).
+## 📋 Work Rules for Agents
+- Maintain **separation**: HTML (structure), CSS (styles), JS (behavior).
+- Do not add heavy libraries without justification (size, performance, accessibility).
+- Before deleting or renaming functions, **explain in PR** the reason.
+- Before restructuring, **describe** the plan and impact (brief).
+- Maintain basic accessibility (labels, `aria-*`, navigable focus).
 
 ---
 
-## ❌ No hacer (sin aprobación explícita)
-- Sustituir Bootstrap o añadir frameworks grandes.
-- Reescribir toda la estructura en un solo PR.
-- Cambiar rutas de imágenes/videos sin actualizar referencias.
-- Dejar *console errors* o degradar rendimiento perceptible.
+## ✅ Manual Verification Checklist
+- `index.html` loads without errors (including Bootstrap CDN).
+- Responsive menu works (open/close; scroll to sections).
+- **Book** buttons smooth scroll to form section.
+- Form: phone numbers only, correct date/time selection.
+- WhatsApp opens with correct data (encoded URL).
+- Google Calendar creates event (web and Android deep link if applicable).
+- Carousel and video display and don't break layout.
+- **Clean console** (no errors or critical warnings).
 
 ---
 
-## 🧪 Ejemplos de responsabilidades (referencia)
+## ❌ Do Not (without explicit approval)
+- Replace Bootstrap or add large frameworks.
+- Rewrite entire structure in a single PR.
+- Change image/video paths without updating references.
+- Leave *console errors* or degrade perceptible performance.
+
+---
+
+## 🧪 Responsibility Examples (reference)
 - `domain/validators.js`: `isValidPhone(value)`, `isValidDate(value)`, `isValidTime(value)`.
 - `infrastructure/calendarGateway.js`: `createCalendarLink({ date, time, durationHours, title, description })`.
 - `infrastructure/whatsappGateway.js`: `createWhatsAppLink({ phoneNumber, message })`.
-- `application/createReservation.js`: orquesta: valida datos, arma enlaces y devuelve `{ calendarUrl, whatsappUrl }`.
-- `ui/reservationForm.js`: lee el DOM, previene submit, llama `createReservation(data)` y abre los enlaces.
-- `ui/scrollButtons.js`: añade listeners a botones para hacer `scrollIntoView` suave.
-- `ui/navBar.js`: gestiona collapse y navegación en móviles.
-- `ui/main.js`: punto de entrada que importa los módulos UI.
+- `application/createReservation.js`: orchestrates: validates data, builds links and returns `{ calendarUrl, whatsappUrl }`.
+- `ui/reservationForm.js`: reads DOM, prevents submit, calls `createReservation(data)` and opens links.
+- `ui/scrollButtons.js`: adds listeners to buttons to perform smooth `scrollIntoView`.
+- `ui/navBar.js`: manages collapse and navigation on mobile.
+- `ui/main.js`: entry point that imports UI modules.
 
 ---
 
-## 📌 Notas de implementación
-- Mantener compatibilidad con **Bootstrap 5.3.x**.
-- Si se migran rutas, actualizar `<link rel="stylesheet">` y `<script type="module">` en `index.html`.
-- Mantener tamaños de imágenes razonables (optimizar si es necesario).
-- Evitar *magic strings*: centralizar textos repetidos en constantes cuando sean internos al código.
+## 📌 Implementation Notes
+- Maintain compatibility with **Bootstrap 5.3.x**.
+- If paths are migrated, update `<link rel="stylesheet">` and `<script type="module">` in `index.html`.
+- Keep reasonable image sizes (optimize if necessary).
+- Avoid *magic strings*: centralize repeated texts in constants when internal to code.
