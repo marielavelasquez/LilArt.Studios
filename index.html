@@ -89,7 +89,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-12 col-md-6 text-center text-md-start">
-                    <h2>Uñas que hablan por ti</h2>
+                    <h2 class="head-text text-md-center text-center fw-semibold">Uñas que hablan por ti</h2>
                     <p class=" my-hero-subtitle">Con más de 7 años de experiencia, en LilArt.Studios cuidamos cada
                         detalle para que tus manos reflejen tu estilo, tu elegancia y tu actitud.</p>
                     <button type="button" class="btn btn-secondary" id="btn-go-reservar">Reservar una cita</button>
@@ -104,15 +104,15 @@
     <section id="video-nails" class="nails-container">
         <div class="container">
             <div class="row align-items-center justify-content-center">
-                <div class="col-6 col-md-6 col-lg-5 v-nails-conatiner">
-                    <div class="video-nails">
+                <div class="col-12 col-md-6 col-lg-6 d-flex justify-content-center">
+                    <div class="video-nails v-nails-container">
                         <video autoplay muted loop playsinline class="w-100 rounded object-fit-cover">
                             <source src="images.img/video-area/esmaltes.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
 
-                <div class="col-12 col-md-6 text-md-start text-center">
+                <div class="col-12 col-lg-6 col-md-6 text-center text-md-start">
                     <p class="fs-12 text-justify text-video-nails ">
                         Una manicurista es una persona que tiene por oficio cuidar y embellecer las manos
                         y, especialmente,
@@ -129,10 +129,11 @@
     </section>
 
     <section id="carousel-triple" class="py-5">
-        <h2 class="carousel-text">Trabajos realizados</h2>
+        <div class="container">
+            <h2 class="carousel-text fw-semibold">Trabajos realizados</h2>
 
-        <div id="carouselMulti" class="carousel slide py-3" data-bs-ride="carousel" data-bs-interval="4000"
-            data-bs-touch="true" data-bs-pause="hover">
+            <div id="carouselMulti" class="carousel slide py-3" data-bs-ride="carousel" data-bs-interval="4000"
+                data-bs-touch="true" data-bs-pause="hover">
 
 
             <div class="carousel-inner">
@@ -219,20 +220,20 @@
 
         </div>
 
-        <!-- botón CTA centrado -->
-        <div class="text-center mt-4">
-            <button type="button" class="btn btn-secondary" id="btn-go-reservar3">Reservar una cita</button>
+            <!-- botón CTA centrado -->
+            <div class="text-center mt-4">
+                <button type="button" class="btn btn-secondary" id="btn-go-reservar3">Reservar una cita</button>
+            </div>
         </div>
-
     </section>
 
 
 
     <section id="form-reserve" class="py-5">
-        <div>
-            <div class="row gy-4 wrap-form">
-                <div class="col-12 col-lg-6">
-                    <h2>Reservar una cita con Lilibeth</h2>
+        <div class="container">
+            <div class="row gy-4 justify-content-center">
+                <div class="col-12 col-lg-8">
+                    <h2 class="fw-semibold">Reservar una cita con Lilibeth</h2>
                     <form id="whatsapp-form" class="row g-3">
                         <div class="col-12">
                             <label for="name" class="form-label">Nombre completo</label>
@@ -304,7 +305,7 @@
     </section>
 
 
-    <footer class="py-5 my-footer mt-5">
+    <footer class="my-footer mt-5">
         <div class="container">
 
             <!-- MOBILE: Acordeón para pantallas pequeñas -->
@@ -312,7 +313,7 @@
 
                 <!-- Ir a -->
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingIrA">
+                    <h2 class="accordion-header fw-semibold" id="headingIrA">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseIrA" aria-expanded="false" aria-controls="collapseIrA">
                             Ir a
@@ -330,7 +331,7 @@
 
                 <!-- Contacto -->
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingContacto">
+                    <h2 class="accordion-header fw-semibold" id="headingContacto">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseContacto" aria-expanded="false" aria-controls="collapseContacto">
                             Contacto
@@ -349,7 +350,7 @@
 
                 <!-- Atención al cliente -->
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingAtencion">
+                    <h2 class="accordion-header fw-semibold" id="headingAtencion">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseAtencion" aria-expanded="false" aria-controls="collapseAtencion">
                             Atención al cliente
@@ -399,15 +400,15 @@
 
             </div>
 
-            <!-- Derechos -->
-            <div class="text-center mt-4">
-                <small>&copy; 2025 LilArt.Studios - Todos los derechos reservados</small>
-            </div>
-
             <!-- Logo pequeño en el footer - solo móvil -->
             <div class="text-center mt-3 d-md-none">
                 <img src="images.img/logo/logo-light.png" alt="Logo LilArt" class="img-fluid logo-light-bottom">
                 <img src="images.img/logo/logo-dark.png" alt="Logo LilArt" class="img-fluid logo-dark-bottom">
+            </div>
+
+            <!-- Derechos -->
+            <div class="text-center mt-4">
+                <small>&copy; 2025 LilArt.Studios - Todos los derechos reservados</small>
             </div>
 
         </div>
