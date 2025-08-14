@@ -72,7 +72,7 @@ body.dark-mode .navbar .nav-link[aria-current="page"] {
 
 /* Footer logo sizing */
 .logo-light-bottom, .logo-dark-bottom {
-  max-width: 150px;
+  max-width: 80px;
   height: auto;
 }
 
@@ -136,8 +136,8 @@ h2 {
   font-family: "Libertinus Mono", monospace;
   font-style: normal;
   color: var(--text-color);
-  font-size: 30px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 ul li {
@@ -153,11 +153,6 @@ ul li {
 #btn-go-reservar{
   margin-bottom: 20px;
 }
-
-.my-hero-title{
-  font-size: 30px;
-}
-
 .image-hero {
   width: 85%;
 }
@@ -317,6 +312,14 @@ body.dark-mode .carousel-control-next-icon {
     padding-bottom: 5rem;
     padding-top: 5rem;
   }
+  h2 {
+  font-size: 33px;
+  font-weight: bold;
+}
+.send-form{
+  width: 50%;
+  max-width: 100%;
+}
 }
 
 /* Footer - mobile base */
