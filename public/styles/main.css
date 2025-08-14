@@ -1,3 +1,4 @@
+/* Mobile-first base styles */
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
@@ -42,7 +43,7 @@ body.dark-mode .navbar .nav-link[aria-current="page"] {
   color: var(--text-color);
 }
 
-/* Logo styling */
+/* Logo styling - mobile base */
 .logo-light, .logo-dark {
   width: 100%;
   height: auto;
@@ -130,7 +131,7 @@ body.dark-mode .dropdown-item:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-
+/* Typography - mobile base */
 h2 {
   font-family: "Libertinus Mono", monospace;
   font-style: normal;
@@ -138,7 +139,6 @@ h2 {
   font-size: 30px;
   font-weight: 500;
 }
-
 
 ul li {
   font-size: 20px;
@@ -149,29 +149,42 @@ ul li {
   padding: 0 1rem 0 1rem;
 }
 
-/*........................................hero.............................................*/
+/* Hero section - mobile base */
 #btn-go-reservar{
-margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
+.my-hero-title{
+  font-size: 30px;
+}
 
-/*........................................video nails.............................................*/
+.image-hero {
+  width: 85%;
+}
 
+/* Video nails - mobile base */
 .video-nails {
   max-width: 370px;
 }
+
 .text-video-nails{
   padding-top: 15px;
 }
 
+.v-nails-conatiner{
+  max-width: 85%;
+  width: 100%;
+  max-height: 50%;
+  height: 100%;
+  align-content: center;
+}
 
-
-/*........................................carousel.............................................*/
- .carousel-text{
+/* Carousel - mobile base */
+.carousel-text{
   padding-bottom: 5px;
   padding-top: 60px;
   text-align: center;
- }
+}
 
 /* Carousel arrow visibility fixes */
 .carousel-control-prev,
@@ -205,11 +218,45 @@ body.dark-mode .carousel-control-next-icon {
   margin: 0 auto;
 }
 
-#carouselMulti {
-  max-height: 1000px;
-  max-width: 1000px;
+/* Mobile carousel - show by default */
+#carouselMobile {
+  display: flex;
+}
+
+#carouselMobile .carousel-item {
+  height: 450px;
+}
+
+/* Limita el ancho para que no ocupe todo el viewport */
+.gallery-mobile {
+  max-width: 330px;
   margin: 0 auto;
-  position: relative;
+}
+
+/* Asegura que la imagen respete proporción */
+#carouselMobile .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: flex;
+  justify-self: center;
+}
+
+/* Esconde flechas si por alguna razón aparecieran */
+#carouselMobile .carousel-control-prev,
+#carouselMobile .carousel-control-next {
+  display: none !important;
+}
+
+/* Opcional: quita scroll bar en WebKit */
+#carouselMobile .carousel-inner {
+  overflow-x: hidden;
+}
+
+/* Desktop carousel - hide by default */
+#carouselMulti {
+  display: none;
 }
 
 #carousel-triple img {
@@ -219,7 +266,6 @@ body.dark-mode .carousel-control-next-icon {
   height: 500px;
 }
 
-
 .btn {
   padding: 12px 24px;
   border: none;
@@ -228,9 +274,7 @@ body.dark-mode .carousel-control-next-icon {
   transition: background-color 0.3s ease;
 }
 
-
-/*........................................form.............................................*/
-
+/* Form - mobile base */
 .wrap-form {
   justify-content: center;
   padding: 10px 20px;
@@ -247,87 +291,35 @@ body.dark-mode .carousel-control-next-icon {
   justify-content: center;
 }
 
-
-/*........................................mobile.............................................*/
-
-@media (max-width: 768px) {
-
-  #carouselMulti {
-    display: none;
-  }
-
-  #carouselMobile {
-    display: flex;
-
-  }
-
-  #carouselMobile .carousel-item {
-    height: 450px;
-  }
-
-
-  /* Limita el ancho para que no ocupe todo el viewport */
-  .gallery-mobile {
-    max-width: 330px;
-    margin: 0 auto;
-  }
-
-  /* Asegura que la imagen respete proporción */
-  #carouselMobile .carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 12px;
-    display: flex;
-    justify-self: center;
-  }
-
-  /* Esconde flechas si por alguna razón aparecieran */
-  #carouselMobile .carousel-control-prev,
-  #carouselMobile .carousel-control-next {
-    display: none !important;
-  }
-
-  /* Opcional: quita scroll bar en WebKit */
-  #carouselMobile .carousel-inner {
-    overflow-x: hidden;
-  }
-
-  .send-form {
-    width: 100%;
-    max-width: 1000px;
-  }
-
-  .my-hero-title{
-    font-size: 30px;
-  }
-
-  .image-hero {
-  width: 85%;
-}
-
-.v-nails-conatiner{
-  max-width: 85%;
+.send-form {
   width: 100%;
-  max-height: 50%;
-  height: 100%;
-  align-content: center;
+  max-width: 1000px;
 }
 
-}
+
+/* Tablet and Desktop Progressive Enhancement */
 
 @media (min-width: 768px) {
-
+  /* Hide mobile carousel, show desktop carousel */
   #carouselMobile {
     display: none;
   }
- .nails-container{
-  padding-bottom: 5rem;
-  padding-top: 5rem;
-}
-}
-/*........................................Footer.............................................*/
 
+  #carouselMulti {
+    display: block;
+    max-height: 1000px;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .nails-container{
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+  }
+}
+
+/* Footer - mobile base */
 .my-footer {
   backdrop-filter: blur(5px);
   border-top: 1px solid var(--footer-border-color);
